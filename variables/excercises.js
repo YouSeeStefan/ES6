@@ -182,10 +182,10 @@ for (i; i < 3; i++) {
     
   */
 
- function tdz () {
-     console.log(dinner);
+//  function tdz () {
+//      console.log(dinner);
 
 
-     var dinner = 'Lasagna';
- }
- tdz();
+//      var dinner = 'Lasagna';
+//  }
+//  tdz();
