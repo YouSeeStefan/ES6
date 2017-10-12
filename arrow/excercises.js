@@ -13,25 +13,25 @@
  */
 
 // Corrigeer 1.
-var add () => 1 + 1;
+var add = () => 1 + 1;
 console.log(add());
 
 // Corrigeer 2.
-var divide = num1, num2 => num1 / num2;
+var divide = (num1, num2) => num1 / num2;
 console.log(divide(7, 2))
 
 // Corrigeer 3.
 var square = (width, length) => {
     const double = 2;
-    let width = width * double;
-    let length = length * double;
-    width * length;
+    let b = width * double;
+    let l = length * double;
+    return b * l;
 
 }
 console.log(square(10, 15));
 
 // Corrigeer 4.
-var counting = {4, 2, 14}.map((x) => {
+var counting = [4, 2, 14].map((x) => {
     var add = x + 1;
     return x * add;
 });
@@ -51,6 +51,8 @@ const score = [
     {course: 'Backend', grade: 9},
     {course: 'Java', grade: 4}
 ];
+
+console.log(numbers);
 
 // Herschrijf 1.
 const oneven = numbers.filter(function (number) {
