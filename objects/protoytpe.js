@@ -2,7 +2,7 @@ let issues = [];
 
 /*
  * Literal syntax
- * Let op: Zo maak je ene method met litera;
+ * Let op: Zo maak je ene method met literal;
  * de method key wordt gescheiden door een : en heeft als value een function
  *
  */
@@ -13,20 +13,21 @@ let issue = {
     description: 'The typeof operator returns a string indicating the type of the unevaluated operand. ',
     example: 'typeof 20',
 
-    displayExample: function() {
+    displayId: function() {
         return this.example;
     }
 };
 
 /*
-*
-* function object
-* De naam begint met een hoofdletter. (Gewoon een afspraak)
-* De methods kun je in de body van het object meegeven.
-* Let op: De mehtod wordt nu aangemaakt als een normale functie expression dus met een =
-*
-*
+ *
+ * function object
+ * De naam begint met een hoofdletter. (Gewoon een afspraak)
+ * De methods kun je in de body van het object meegeven.
+ * Let op: De mehtod wordt nu aangemaakt als een normale functie expression dus met een =
+ *
+ *
  */
+
 function Issue(id, name, description, example) {
 
     this.id = id;
@@ -36,12 +37,13 @@ function Issue(id, name, description, example) {
 
 
     // Methods in object
-    this.displayIssue = function() {
-        return this.name;
+
+    this.displayDescription = function() {
+        return this.description;
     },
 
-    this.displayExample = function() {
-        return this.example;
+    this.displayId = function() {
+        return this.id;
     }
 
 }
@@ -67,8 +69,6 @@ Issue.prototype = {
  *
  */
 issues.push(new Issue(issues.length, 'assignment', 'Statement that is used to set or change a value to a vaiable name', 'let x = 5;'));
-// console.log(issues[0].name);
-// alert(issues[0].displayExample());
 
 /*
  *
@@ -77,11 +77,10 @@ issues.push(new Issue(issues.length, 'assignment', 'Statement that is used to se
  *
  */
 issues.push(new Issue(issues.length, issue.name, issue.description, issue.example));
-// console.log(issues[1].id + ': ' + issues[1].displayIssue());
 
 /*
  *
- * Push new object
+ * Push another new object
  *
  *
  */
@@ -94,9 +93,9 @@ issues.push(new Issue(issues.length, 'assignment operator', 'An assignment opera
  *
  */
 function showElement(element, index, array) {
+    console.log ('ID: ' + element.displayIssue() + ': ' +  element.displayId());
+    console.log('Description: ' + element.displayDescription());
     console.log (element.displayIssue() + ': ' +  element.displayExample());
 }
 issues.forEach(showElement);
-
-
 
